@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        hr {
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="tel"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .otp-section {
+            display: none; /* Initially hidden */
+        }
+        .otp-section input[type="text"] {
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>LOGIN</h1>
+        <hr>
+        <input type="text" placeholder="Username">
+        <input type="tel" placeholder="Mobile Number">
+        <input type="password" placeholder="Password">
+        <button type="button" onclick="showOtpSection()">Login with Password</button>
+
+
+
+<!-- /*otp is in pending state*/ -->
+
+
+
+
+        <div class="otp-section">
+            <hr>
+            <h3>Verify OTP</h3>
+            <input type="text" placeholder="Enter OTP">
+            <button type="button">Verify OTP</button>
+            <button type="button" onclick="hideOtpSection()">Back to Login</button>
+        </div>
+    </div>
+
+    <script>
+        function showOtpSection() {
+            document.querySelector('.otp-section').style.display = 'block';
+            // You would typically trigger sending the OTP to the entered mobile number here
+            alert('OTP sent to your mobile number (This is a simulated action)');
+        }
+
+        function hideOtpSection() {
+            document.querySelector('.otp-section').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
